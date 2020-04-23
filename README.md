@@ -12,8 +12,8 @@ Available nodes are:
 
 
 
-<img src="https://github.com/aleksandrdobrynin/node-red-contrib-miio-airfresh/blob/master/readme/1.png?raw=true">
-<img src="https://github.com/aleksandrdobrynin/node-red-contrib-miio-airfresh/blob/master/readme/2.png?raw=true">
+<img src="https://github.com/aleksandrdobrynin/node-red-contrib-miio-airfresh/blob/master/readme/main.png?raw=true">
+<img src="https://github.com/aleksandrdobrynin/node-red-contrib-miio-airfresh/blob/master/readme/properties.png?raw=true">
 
 
 
