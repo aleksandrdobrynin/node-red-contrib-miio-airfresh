@@ -1,7 +1,8 @@
 {
   "name": "node-red-contrib-miio-airfresh",
   "dependencies": {
-    "miio": "latest"
+    "miio": "latest",
+    "events": "latest"
   },
   "node-red": {
     "nodes": {
@@ -21,5 +22,13 @@
     "node-red"
   ],
   "author": "Aleksandr Dobrynin",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksandrdobrynin/node-red-contrib-miio-airfresh.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aleksandrdobrynin/node-red-contrib-miio-airfresh/issues"
+  },
+  "homepage": "https://github.com/aleksandrdobrynin/node-red-contrib-miio-airfresh#readme"
 }
