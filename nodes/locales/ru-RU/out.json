@@ -1,0 +1,33 @@
+{
+    "label": {
+        "name": "Название",
+        "server": "Устройство",
+        "command": "Команда",
+        "payload": "Данные",
+        "options": "Параметры"
+    },
+    "placeholder": {
+        "name": "Название"
+    },
+    "status": {
+        "server_node_error": "ошибка устройства",
+        "error": "ошибка",
+        "disconnected": "нет связи"
+    },
+    "commands": {
+        "set_power": "Питание",
+        "set_mode": "Режим",
+        "set_favourite_speed": "Скорость",
+        "set_ptc_on": "Подогрев",
+        "set_display": "Подсветка",
+        "set_sound": "Звук",
+        "set_child_lock": "Защита от детей"
+    },
+    "arguments": {
+        "true": "Вкл",
+        "false": "Выкл",
+        "auto": "Авто",
+        "sleep": "Ночной",
+        "favourite": "Ручной"
+    }
+}

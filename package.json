@@ -1,0 +1,25 @@
+{
+  "name": "node-red-contrib-miio-airfresh",
+  "dependencies": {
+    "miio": "latest"
+  },
+  "node-red": {
+    "nodes": {
+      "in": "nodes/in.js",
+      "out": "nodes/out.js",
+      "get": "nodes/get.js",
+      "server": "nodes/server.js",
+      "api": "api.js"
+    }
+  },
+  "version": "0.0.2",
+  "description": "Miio node for Air Fresh (Xiaomi)",
+  "keywords": [
+    "miio",
+    "airfresh",
+    "xiaomi",
+    "node-red"
+  ],
+  "author": "Aleksandr Dobrynin",
+  "license": "GPL-3.0"
+}

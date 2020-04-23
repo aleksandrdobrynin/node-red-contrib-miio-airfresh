@@ -1,0 +1,33 @@
+{
+    "label": {
+        "name": "Name",
+        "server": "Device",
+        "command": "Command",
+        "payload": "Payload",
+        "options": "Options"
+    },
+    "placeholder": {
+        "name": "Name"
+    },
+    "status": {
+        "server_node_error": "server node error",
+        "error": "error",
+        "disconnected": "disconnected"
+    },
+    "commands": {
+        "set_power": "Power",
+        "set_mode": "Mode",
+        "set_favourite_speed": "Speed",
+        "set_ptc_on": "Heat",
+        "set_display": "Light",
+        "set_sound": "Sound",
+        "set_child_lock": "Child Lock"
+    },
+    "arguments": {
+        "true": "On",
+        "false": "Off",
+        "auto": "Auto",
+        "sleep": "Sleep",
+        "favourite": "Manual"
+    }
+}
