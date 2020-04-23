@@ -26,11 +26,18 @@ Available nodes are:
 	"TargetAirPurifierState": {},
 	"SwingMode": {},
 	"LockPhysicalControls": {},
-	"FilterChangeIndication": {},
+	"CurrentTemperature": {},
 	"FilterLifeLevel": {},
-	"CarbonDioxideDetected": {},
+	"FilterChangeIndication": {},
 	"CarbonDioxideLevel": {},
+	"CarbonDioxideDetected": {},
+	"PM2_5Density": {},
 	"AirQuality": {},
-	"PM2_5Density": {}
+	"On": {},
+	"RotationSpeed": {
+	     "minValue": 0,
+         "maxValue": 100,
+         "minStep": 1
+	}
 }
 ```
