@@ -201,19 +201,6 @@ module.exports = function(RED) {
 			}
 
 			var msg = {};
-			//
-			//            if (Object.keys(payload).length) {
-			//                if (payload.RelativeHumidityAirFreshThreshold !== undefined) {
-			//                    var value = payload.RelativeHumidityAirFreshThreshold;
-			//                    if (value > 0 && value <= 40) {
-			//                        value = 40;
-			//                    } else if (value > 80 && value <= 100) {
-			//                        value = 80;
-			//                    }
-			//
-			//                    msg["set_limit_hum"] = value;
-			//                }
-			//
 
 			if (payload.Active !== undefined) {
 				msg["set_power"] = Boolean(payload.Active) ? "true" : "false";
@@ -237,7 +224,6 @@ module.exports = function(RED) {
 
 			if (payload.RotationSpeed !== undefined) {
 				var value = payload.RotationSpeed;
-				// var currentmode = node.TargetAirPurifierState;
 				var newVal;
 				var newmode = "favourite";
 				if (value > 0) {
@@ -245,11 +231,6 @@ module.exports = function(RED) {
 
 					msg["set_favourite_speed"] = newVal;
 					msg["set_mode"] = newmode;
-					// if (currentmode !== "favourite") {msg["set_mode"] = newmode;}
-					// console.log('BEFORE SEND 2:');
-					// console.log({
-					// 	var: currentmode
-					// });
 				}
 			}
 
