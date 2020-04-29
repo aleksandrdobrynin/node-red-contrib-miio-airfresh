@@ -155,21 +155,21 @@ module.exports = function(RED) {
 				msg.LockPhysicalControls = 0;
 			}
 
-			msg.CurrentTemperature = status.temperature_outside;
+			// msg.CurrentTemperature = status.temperature_outside;
 
-			if (status.ptc_status === true) {
-				msg.On = 1;
-			} else if (status.ptc_status === false) {
-				msg.On = 0;
-			}
+			// if (status.ptc_status === true) {
+			// 	msg.On = 1;
+			// } else if (status.ptc_status === false) {
+			// 	msg.On = 0;
+			// }
 
-			msg.FilterLifeLevel = status.filter_rate;
+			// msg.FilterLifeLevel = status.filter_rate;
 
-			if (status.filter_rate < 5) {
-				msg.FilterChangeIndication = 1;
-			} else {
-				msg.FilterChangeIndication = 0;
-			}
+			// if (status.filter_rate < 5) {
+			// 	msg.FilterChangeIndication = 1;
+			// } else {
+			// 	msg.FilterChangeIndication = 0;
+			// }
 
 			if (status.mode === "auto") {
 				msg.RotationSpeed = status.control_speed - 50;
@@ -181,30 +181,30 @@ module.exports = function(RED) {
 				msg.RotationSpeed = 0;
 			}
 
-			msg.CarbonDioxideLevel = status.co2
+			// msg.CarbonDioxideLevel = status.co2
 
-			if (status.co2 <= 800) {
-				msg.CarbonDioxideDetected = 0;
-			} else if (status.co2 > 1000) {
-				msg.CarbonDioxideDetected = 1;
-			}
+			// if (status.co2 <= 800) {
+			// 	msg.CarbonDioxideDetected = 0;
+			// } else if (status.co2 > 1000) {
+			// 	msg.CarbonDioxideDetected = 1;
+			// }
 
-			msg.PM2_5Density = status.pm25;
+			// msg.PM2_5Density = status.pm25;
 
-			if (status.pm25 <= 5) {
-				msg.AirQuality = 1;
-			} else if (status.pm25 > 5 && status.pm25 <= 12) {
-				msg.AirQuality = 2;
-			} else if (status.pm25 > 12 && status.pm25 <= 35) {
-				msg.AirQuality = 2;
-			} else if (status.pm25 > 35 && status.pm25 <= 55) {
-				msg.AirQuality = 2;
-			} else if (status.aqi > 55) {
-				msg.AirQuality = 5;
-			} else {
-				msg.AirQuality = 0;
-			}
-
+		// 	if (status.pm25 <= 5) {
+		// 		msg.AirQuality = 1;
+		// 	} else if (status.pm25 > 5 && status.pm25 <= 12) {
+		// 		msg.AirQuality = 2;
+		// 	} else if (status.pm25 > 12 && status.pm25 <= 35) {
+		// 		msg.AirQuality = 3;
+		// 	} else if (status.pm25 > 35 && status.pm25 <= 55) {
+		// 		msg.AirQuality = 4;
+		// 	} else if (status.aqi > 55) {
+		// 		msg.AirQuality = 5;
+		// 	} else {
+		// 		msg.AirQuality = 0;
+		// 	}
+		//
 			return msg;
 		}
 
@@ -215,13 +215,13 @@ module.exports = function(RED) {
 			msg.TargetAirPurifierState = "NO_RESPONSE";
 			msg.SwingMode = "NO_RESPONSE";
 			msg.LockPhysicalControls = "NO_RESPONSE";
-			msg.FilterChangeIndication = "NO_RESPONSE";
-			msg.FilterLifeLevel = "NO_RESPONSE";
-			msg.CarbonDioxideLevel = "NO_RESPONSE";
-			msg.AirQuality = "NO_RESPONSE";
-			msg.PM2_5Density = "NO_RESPONSE";
-			msg.CurrentTemperature = "NO_RESPONSE";
-			msg.On = "NO_RESPONSE";
+			// msg.FilterChangeIndication = "NO_RESPONSE";
+			// msg.FilterLifeLevel = "NO_RESPONSE";
+			// msg.CarbonDioxideLevel = "NO_RESPONSE";
+			// msg.AirQuality = "NO_RESPONSE";
+			// msg.PM2_5Density = "NO_RESPONSE";
+			// msg.CurrentTemperature = "NO_RESPONSE";
+			// msg.On = "NO_RESPONSE";
 			msg.RotationSpeed = "NO_RESPONSE";
 			return msg;
 		}
