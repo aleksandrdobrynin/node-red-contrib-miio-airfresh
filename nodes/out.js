@@ -95,7 +95,23 @@ module.exports = function(RED) {
 								break;
 							case "set_favourite_speed":
 								payload = parseInt(payload);
-								break
+								break;
+							// case "set_ptc_on":
+							// // var payload = 'true'
+							// 	if (payload == 'on' || payload == 1 || payload == '1' || payload == 'true' || payload == true) payload = "true";
+							// 	if (payload == 'off' || payload == 0 || payload == '0' || payload == 'false' || payload == false) payload = "false";
+							// 	console.log(JSON.stringify([payload]));
+
+								// if (payload == 'on' || payload == 1 || payload == '1' || payload == 'true' || payload == true) payload = "true";
+								// if (payload == 'off' || payload == 0 || payload == '0' || payload == 'false' || payload == false) payload = "false";
+
+							// console.log('BEFORE SEND 1:');
+							// console.log({
+							// 	command: command,
+							// 	payload: payload
+							// });
+
+								break;
 
 							default:
 								{
@@ -141,8 +157,10 @@ module.exports = function(RED) {
 			if (device === undefined) return false;
 			if (command === null) return false;
 			if (payload === undefined) payload = [];
-			//            if (command === 'set_favourite_speed') payload = parseInt(payload);
+			// if (command === 'set_favourite_speed') payload = parseInt(payload);
+      // if (command === 'set_ptc_on') payload = JSON.stringify([payload]);
 			if (payload && typeof(payload) !== 'object') payload = [payload];
+
 
 			console.log('BEFORE SEND:');
 			console.log({
