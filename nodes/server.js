@@ -78,14 +78,23 @@ module.exports = function (RED) {
 
                             for (var key in result) {
                                 var value = result[key];
+                            
+                                if (value === undefined || value === null) { continue; }
+                            
                                 if (key in that.status) {
                                     if (!(key in that.status) || that.status[key] !== value) {
                                         that.status[key] = value;
-                                        that.emit("onStateChanged", {key: key, value: value}, true);
+                                        that.emit("onStateChanged", {
+                                            key: key,
+                                            value: value
+                                        }, true);
                                     }
                                 } else { //init: silent add
                                     that.status[key] = value;
-                                    that.emit("onStateChanged", {key: key, value: value}, false);
+                                    that.emit("onStateChanged", {
+                                        key: key,
+                                        value: value
+                                    }, false);
                                 }
                             }
 

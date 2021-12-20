@@ -56,7 +56,7 @@ module.exports = function(RED) {
 				var status = {
 					fill: co2 <= 800 ? "green" : (isOn ? "green" : "red"),
 					shape: "dot",
-					text: (isOn ? "On (" + mode + ")" : "Off") + ',  ' + co2 + ' ppm' + ',  ' + pm25 + ' µg/m3' + ',  ' + temperature_outside + '°C'
+					text: (isOn ? "On (" + mode + ")" : "Off") + ',  ' + co2 + ' ppm' + ',  ' + pm25 + ' Вµg/m3' + ',  ' + temperature_outside + 'В°C'
 				};
 
 				node.status(status);
@@ -171,15 +171,17 @@ module.exports = function(RED) {
 			// 	msg.FilterChangeIndication = 0;
 			// }
 
-			if (status.mode === "auto") {
-				msg.RotationSpeed = status.control_speed - 50;
-			} else if (status.mode === "favourite") {
-				msg.RotationSpeed = status.control_speed - 50;
-			} else if (status.mode === "sleep") {
-				msg.RotationSpeed = status.control_speed - 50;
-			} else {
+			if (status.power === false) {
 				msg.RotationSpeed = 0;
-			}
+			   } else if (status.mode === "auto") {
+				msg.RotationSpeed = status.control_speed - 50;
+			   } else if (status.mode === "favourite") {
+				msg.RotationSpeed = status.control_speed - 50;
+			   } else if (status.mode === "sleep") {
+				msg.RotationSpeed = status.control_speed - 50;
+			   } else {
+				msg.RotationSpeed = 0;
+			   }
 
 			// msg.CarbonDioxideLevel = status.co2
 
