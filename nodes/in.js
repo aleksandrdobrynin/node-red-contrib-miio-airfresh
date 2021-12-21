@@ -56,7 +56,7 @@ module.exports = function(RED) {
 				var status = {
 					fill: co2 <= 800 ? "green" : (isOn ? "green" : "red"),
 					shape: "dot",
-					text: (isOn ? "On (" + mode + ")" : "Off") + ',  ' + co2 + ' ppm' + ',  ' + pm25 + ' Вµg/m3' + ',  ' + temperature_outside + 'В°C'
+					text: (isOn ? "On (" + mode + ")" : "Off") + ',  ' + co2 + ' ppm' + ',  ' + pm25 + ' µg/m3' + ',  ' + temperature_outside + '°C'
 				};
 
 				node.status(status);
